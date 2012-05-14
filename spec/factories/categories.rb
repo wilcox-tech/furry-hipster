@@ -3,5 +3,6 @@
 FactoryGirl.define do
   factory :category do
     title "My Category"
+    slug "my_category"
   end
 end
