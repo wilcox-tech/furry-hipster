@@ -1,2 +1,6 @@
-<h1>Pages#show</h1>
-<p>Find me in app/views/pages/show.html.erb</p>
+<% provide :title, @page.title %>
+
+<h1><%= @page.title %></h1>
+<% unless @page.tagline.nil? %><h2><%= @page.tagline %></h2><% end %>
+
+<%= markdownify(@page.content) %>
