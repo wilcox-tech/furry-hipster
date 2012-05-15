@@ -11,3 +11,18 @@
  *= require_self
  *= require_tree .
 */
+body { font: "Lucida Grande","Helvetica Neue","Helvetica","Verdana",sans-serif; }
+
+.hero-unit {
+  background: transparent !important;
+  padding-top: 150px;
+}
+
+.navbar-inner {
+  background: #666 !important;
+  opacity: 0.7 !important;
+  filter: alpha(opacity=70);
+}
+
+.nav a { color: #fff !important; }
+.nav a:hover { color: #ddd !important; }
