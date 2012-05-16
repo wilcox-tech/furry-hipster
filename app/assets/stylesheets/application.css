@@ -24,5 +24,7 @@ body { font: "Lucida Grande","Helvetica Neue","Helvetica","Verdana",sans-serif; 
   filter: alpha(opacity=70);
 }
 
+a.brand { background: url(/images/logo.png) center left no-repeat; }
+
 .nav a { color: #fff !important; }
 .nav a:hover { color: #ddd !important; }
