@@ -1,6 +1,7 @@
 <% provide :title, @page.title %>
 
-<h1><%= @page.title %></h1>
-<% unless @page.tagline.nil? %><h2><%= @page.tagline %></h2><% end %>
+<div class="page-header">
+  <h1><%= @page.title %><% unless @page.tagline.nil? %> <small><%= @page.tagline %></small><% end %></h1>
+</div>
 
 <%= markdownify(@page.content) %>
