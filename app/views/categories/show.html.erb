@@ -1,3 +1,13 @@
-<h1><%= @category.title %></h1>
-<% unless @category.tagline.nil? %><h2><%= @category.tagline %></h2><% end %>
+<div class="page-header">
+  <h1>
+    <%= @category.title %>
+    <% unless @category.tagline.nil? %><small><%= @category.tagline %></small><% end %>
+  </h1>
+</div>
 
+<dl>
+<% @category.pages.each { |page| %>
+  <dt><%= link_to page.title, category_page_path(@category.slug, page.slug) %></dt>
+  <dd><%= page.excerpt %></dd>
+<% } %>
+</dl>
