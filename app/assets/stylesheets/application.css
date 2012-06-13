@@ -11,20 +11,113 @@
  *= require_self
  *= require_tree .
 */
-body { font: "Lucida Grande","Helvetica Neue","Helvetica","Verdana",sans-serif; }
+body { font: "Lucida Grande","Helvetica Neue","Helvetica","Verdana",sans-serif; padding-bottom: 40px; }
 
-.hero-unit {
-  background: transparent !important;
-  padding-top: 150px;
+/* Fix tags on support. */
+span.label a { color: white; }
+
+/* Fix badges in navbar on support. */
+p.navbar-text a {color: gray; }
+
+
+.answerbody { margin-bottom: 4em; }
+
+.control-group ul { list-style: none; }
+
+/* Nasty hacks for comments on support site because:
+   1) I hate my life.
+   2) Askbot is inflexible.
+   3) This needs to be done before Christmas 2012.  (It is 9 June 2012 right now.)
+ */
+.comment .comment-votes { display: inline; padding: 0 0.5em; }
+.comment .upvote { display: inline; }
+.comment .upvote:before { content: "↑"; cursor: pointer; }
+.comment .comment-delete { float: right; }
+.comment .delete-icon { content: "x"; display: inline; }
+.comment .comment-body { display: inline; }
+.comment .comment-body p { display: inline; padding-right: 0.5em; }
+.comment .comment-body a { padding-right: 0.5em; }
+.comment .comment-body .author:before { content: "–"; }
+.comment .comment-body .edit { padding-left: 0.5em; }
+.comment { border-bottom: 1px solid #eee; padding-bottom: 0.25em; }
+
+.face { display: inline; }
+.re { padding-bottom: 1em; border: 1px solid #eee; margin: 0.5em; padding: 0.5em; }
+.new { background: #ffe; }
+
+.answer-img-accept:after { content: "✓"; }
+.answer-img-accepted:after { color: green; }
+
+.acResults { background: white; }
+
+
+/* Fancy user badges */
+div.user-badge {
+  text-align: center;
 }
 
-.navbar-inner {
+div.user-badge table { width: 100%; }
+div.user-badge td { padding: 0.5em; }
+div.user-badge td.descriptor { text-align: right; }
+div.user-badge td.data { text-align: left; }
+
+.medal { margin: 0.5em; padding: 0.75em; background: #e0eaf0; border-radius: 1em; display: inline-block; }
+.badge1 { color: #ffd700; }
+.badge2 { color: silver; }
+.badge3 { color: #8c7853; }
+
+div.avatar img {
+  padding: 0.5em;
+  border: 0.25em solid #bbb;
+}
+
+.hero-unit h1 small { color: black; }
+
+@media screen {
+  body#home {background: url(/images/gavel.jpg) top center no-repeat;}
+  .hero-unit {
+    background: transparent !important;
+    padding-top: 150px;
+  }
+  #main_content { margin-top: 150px; }
+}
+
+@media handheld {
+  body#home {background: none;}
+  .hero-unit {
+    padding: 0 0 !important;
+    padding-top: 100px;
+  }
+  #main_content { margin-top: 0; }
+}
+
+@media only screen and (max-device-width: 960px) {
+  body#home {background: none;}
+  .hero-unit {
+    padding: 0 0 !important;
+    padding-top: 100px;
+  }
+  #main_content { margin-top: 0; }
+}
+
+
+.grey-transparent {
+  background: rgb(225, 225, 225); /* For browsers that don't support alpha */
+  background: rgba(225, 225, 225, 0.8);
+  
+  border-radius: 1em;
+  
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+/*.navbar-inner {
   background: #666 !important;
   opacity: 0.7 !important;
   filter: alpha(opacity=70);
-}
+}*/
 
 a.brand { background: url(/images/logo.png) center left no-repeat; }
 
-.nav a { color: #fff !important; }
-.nav a:hover { color: #ddd !important; }
+.navbar > .nav a { color: #fff !important; }
+.navbar > .nav a:hover { color: #ddd !important; }
