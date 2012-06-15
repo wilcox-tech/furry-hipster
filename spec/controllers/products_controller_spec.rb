@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PagesController do
+describe ProductsController do
 
   describe "GET 'show'" do
     it "returns http success" do

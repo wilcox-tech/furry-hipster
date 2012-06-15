@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  has_many :pages, :dependent => :destroy
+  has_many :products, :dependent => :destroy
   
   attr_accessible :tagline, :title, :slug
   

@@ -1,0 +1,7 @@
+<% provide :title, @product.title %>
+
+<div class="page-header">
+  <h1><%= @product.title %><% unless @product.tagline.nil? %> <small><%= @product.tagline %></small><% end %></h1>
+</div>
+
+<%= markdownify(@product.content) %>

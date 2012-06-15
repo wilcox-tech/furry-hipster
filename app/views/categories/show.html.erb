@@ -6,8 +6,8 @@
 </div>
 
 <dl>
-<% @category.pages.each { |page| %>
-  <dt><%= link_to page.title, category_page_path(@category.slug, page.slug) %></dt>
-  <dd><%= page.excerpt %></dd>
+<% @category.products.each { |product| %>
+  <dt><%= link_to product.title, category_product_path(@category.slug, product.slug) %></dt>
+  <dd><%= product.excerpt %></dd>
 <% } %>
 </dl>
