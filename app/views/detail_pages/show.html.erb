@@ -1,0 +1,5 @@
+<% provide :title, @detail_page.title %>
+
+<h1 class="page-header"><%= @detail_page.title %><% unless @detail_page.subtitle.nil? %> <small><%= @detail_page.subtitle %></small><% end %></h1>
+
+<%= markdownify @detail_page.content %>
