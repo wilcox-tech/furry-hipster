@@ -1,4 +1,7 @@
 <% provide :title, @product.title %>
+<% provide :meta_desc, @product.excerpt %>
+
+<% provide :sidebar, make_sidebar_for(@product) if @product.detail_pages.any? %>
 
 <div class="page-header">
   <h1><%= @product.title %><% unless @product.tagline.nil? %> <small><%= @product.tagline %></small><% end %></h1>

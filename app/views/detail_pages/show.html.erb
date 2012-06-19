@@ -1,4 +1,5 @@
 <% provide :title, @detail_page.title %>
+<% provide :sidebar, make_sidebar_for(@product) %>
 
 <h1 class="page-header"><%= @detail_page.title %><% unless @detail_page.subtitle.nil? %> <small><%= @detail_page.subtitle %></small><% end %></h1>
 
