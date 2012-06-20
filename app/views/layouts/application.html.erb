@@ -31,6 +31,10 @@
       })();
     
     </script>
+    <!-- Javascripts
+    ================================================== -->
+    <%= javascript_include_tag "application" %>
+
   </head>
   <body <%= content_for?(:body_tag) ? "id=#{content_for :body_tag}" : "" %>>
 
@@ -71,11 +75,6 @@
       </footer>
 
     </div> <!-- /container -->
-
-    <!-- Javascripts
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <%= javascript_include_tag "application" %>
 
   </body>
 </html>
