@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Wilcox Technologies" %></title>
     <%= csrf_meta_tags %>
-    <% if content_for?(:meta_desc) %><meta name="description" value="<%= yield(:meta_desc) %>"><% end %>
+    <meta name="google-site-verification" content="KF4Ev5lMFtiZHdhCUnh5kczs9HF_KXT8lgCjKbeXXkk" />
+    <% if content_for?(:meta_desc) %><meta name="description" content="<%= yield(:meta_desc) %>"><% end %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
