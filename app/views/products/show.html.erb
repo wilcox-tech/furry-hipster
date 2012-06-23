@@ -1,4 +1,4 @@
-<% provide :title, @product.title %>
+<% provide :title, "#{@product.title} by Wilcox Technologies" %>
 <% provide :meta_desc, @product.excerpt %>
 
 <% provide :sidebar, make_sidebar_for(@product) if @product.detail_pages.any? %>
