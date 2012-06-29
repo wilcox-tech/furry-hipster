@@ -1,0 +1,41 @@
+<% provide :title, 'Wilcox Technologies Press Information' %>
+<% provide :meta_desc, 'Press releases, images, and information about Wilcox Technologies, maker of apps for Mac and iPhone.' %>
+
+<h1 class="page-header">Wilcox Technologies Press Information <small>Press releases, images, and information.</small></h1>
+
+<div class="row">
+  <div class="span3">
+    <h3>Press Inquiries</h3>
+    <h4>+1 (415) 484-WT-PR (9877)</h4>
+    
+    <!-- Hard line breaks still make the Corgi sad, but it is necessary to look right. -->
+    <br/>
+    
+    <p>Not a member of the press?  See <a href="/about/contact" title="How to Contact Us">How to Contact Us</a>.</p>
+    
+    <address><b>Wilcox Technoloiges LLC</b><br/>
+    719 Sunny Pine Way Suite H1<br/>
+    Greenacres, Florida 33415<br/>
+    United States</address>
+  </div>
+  <div class="span6">
+    <h2>Press Releases</h2>
+    <dl class="dl-horizontal">
+    <% @releases.each {|pr| %>
+      <dt><%= pr.created_at.date %></dt>
+      <dd><h4><%= pr.headline %></h4></dd>
+    <% } %>
+    </dl>
+  </div>
+  <div class="span3">
+    <div class="well" style="padding: 8px 0;">
+      <ul class="nav nav-list">
+        <li class="nav-header">Resources for the Press</li>
+        <li><a href="#"><i class="icon-picture"></i> Product Images</a></li>
+        <li><a href="#"><i class="icon-book"></i> Press Release Archive</a></li>
+        <li><a href="/about/team"><i class="icon-user"></i> Team Biographies</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
