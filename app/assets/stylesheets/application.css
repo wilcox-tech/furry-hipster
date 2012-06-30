@@ -11,7 +11,7 @@
  *= require_self
  *= require_tree .
 */
-body { font: "Lucida Grande","Helvetica Neue","Helvetica","Verdana",sans-serif; padding-bottom: 40px; }
+body { font: "Lucida Grande","Helvetica Neue","Helvetica","Verdana",sans-serif; padding: 60px 0 40px 0; }
 
 /* Fix tags on support. */
 span.label a { color: white; }
@@ -121,3 +121,8 @@ a.brand { background: url(/images/logo.png) center left no-repeat; }
 
 .navbar > .nav a { color: #fff !important; }
 .navbar > .nav a:hover { color: #ddd !important; }
+
+.pr-content { font-family: "Palatino Linotype", "Palatino", "Georgia", serif; width: 7.5in; margin: 0 auto; }
+.pr-content p { font-family: "Palatino Linotype", "Palatino", "Georgia", serif; }
+.pr-headline { font-variant: small-caps; }
+/* doesn't work with the word 'iPhone' .pr-subhead { text-transform: capitalize; } */

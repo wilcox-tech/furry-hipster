@@ -28,6 +28,3 @@ gem 'jquery-rails'
 
 # Markdown
 gem 'bluecloth'
-
-# Bootstrap (git)
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
