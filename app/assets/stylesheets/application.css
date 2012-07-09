@@ -83,7 +83,7 @@ div.avatar img {
 }
 
 @media handheld {
-  body#home {background: none;}
+  body#home {background: none; padding-top: 0;}
   .hero-unit {
     padding: 0 0 !important;
     padding-top: 100px;
@@ -91,8 +91,8 @@ div.avatar img {
   #main_content { margin-top: 0; }
 }
 
-@media only screen and (max-device-width: 960px) {
-  body#home {background: none;}
+@media only screen and (max-device-width: 480px) {
+  body#home {background: none; padding-top: 0;}
   .hero-unit {
     padding: 0 0 !important;
     padding-top: 100px;
@@ -117,7 +117,16 @@ div.avatar img {
   filter: alpha(opacity=70);
 }*/
 
-a.brand { background: url(/images/logo.png) center left no-repeat; }
+a.brand {
+  background: url(/images/logo.png) center left no-repeat;
+  width: 36px; height: 36px;
+  padding: 0 !important;
+  margin-left: 20px !important;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+   a.brand { background: url(/images/logo@2x.png) center left no-repeat; background-size: 36px 36px; }
+}
 
 .navbar > .nav a { color: #fff !important; }
 .navbar > .nav a:hover { color: #ddd !important; }
