@@ -28,3 +28,5 @@ gem 'jquery-rails'
 
 # Markdown
 gem 'bluecloth'
+
+gem 'active_link_to'

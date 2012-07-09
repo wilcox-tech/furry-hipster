@@ -55,16 +55,17 @@
         <div class="container">
           <a class="brand" href="/">&nbsp;</a>
             <ul class="nav">
-              <li class="active"><a href="http://www.wilcox-tech.com/">Home</a></li>
+              <%= active_link_to 'Home', '/', :wrap_tag => :li %>
+              <% categories.each do |cat| %>
+                <%= active_link_to cat.title, category_path(cat.slug), :wrap_tag => :li %>
+              <% end %>
               <!-- <li><a href="http://blogs.wilcox-tech.com/">Blogs</a></li> -->
-              <li><a href="http://oss.wilcox-tech.com/">Open Source</a></li>
               <!-- <li><a href="http://people.wilcox-tech.com/">People</a></li> -->
             </ul>
           <div class="container nav-collapse">
             <ul class="nav pull-right">
-              <li><%= link_to "Press", "/pr" %></li>
-              <li><%= link_to "Meet the Team", "/about/team"  %></li>
-              <li><%= link_to "About Us", "/about"  %></li>
+              <li><a href="http://oss.wilcox-tech.com/">Open Source</a></li>
+              <%= active_link_to 'Press', '/pr', :wrap_tag => :li %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
