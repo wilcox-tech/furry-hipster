@@ -49,8 +49,7 @@
 
   </head>
   <body <%= content_for?(:body_tag) ? "id=#{content_for :body_tag}" : "" %>>
-
-    <div class="navbar navbar-fixed-top">
+    <nav><div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="/">&nbsp;</a>
@@ -62,13 +61,14 @@
             </ul>
           <div class="container nav-collapse">
             <ul class="nav pull-right">
+              <li><%= link_to "Press", "/pr" %></li>
               <li><%= link_to "Meet the Team", "/about/team"  %></li>
               <li><%= link_to "About Us", "/about"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
-    </div>
+    </div></nav>
 
     <div class="container">
       <div class="content">
@@ -89,6 +89,7 @@
       </div><!--/content-->
 
       <footer>
+        <hr/>
         <p>&copy; <%= Time.now.year %> Wilcox Technologies, LLC</p>
       </footer>
 
