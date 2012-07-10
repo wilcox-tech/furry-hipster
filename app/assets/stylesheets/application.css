@@ -79,7 +79,6 @@ div.avatar img {
     background: transparent !important;
     padding-top: 150px;
   }
-  #main_content { margin-top: 150px; }
 }
 
 @media handheld {
@@ -88,7 +87,6 @@ div.avatar img {
     padding: 0 0 !important;
     padding-top: 100px;
   }
-  #main_content { margin-top: 0; }
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -97,7 +95,6 @@ div.avatar img {
     padding: 0 0 !important;
     padding-top: 100px;
   }
-  #main_content { margin-top: 0; }
 }
 
 
