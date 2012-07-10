@@ -1,15 +1,11 @@
 <% provide :title, @category.title %>
 
-<div class="page-header">
-  <h1>
-    <%= @category.title %>
-    <% unless @category.tagline.nil? %><small><%= @category.tagline %></small><% end %>
-  </h1>
-</div>
+<h1 class="page-header">
+  <%= @category.title %>
+  <% unless @category.tagline.nil? %><small><%= @category.tagline %></small><% end %>
+</h1>
 
-<dl>
 <% @category.products.each { |product| %>
-  <dt><%= link_to product.title, category_product_path(@category.slug, product.slug) %></dt>
-  <dd><%= product.excerpt %></dd>
+  <h2><%= link_to product.title, category_product_path(@category.slug, product.slug) %></h2>
+  <em><%= product.excerpt %></em>
 <% } %>
-</dl>
