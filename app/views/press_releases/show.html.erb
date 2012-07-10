@@ -1,6 +1,8 @@
 <% provide :title, "#{@pr.headline}" %>
 <% provide :meta_desc, @pr.subhead %>
 
+<% provide :sidebar, make_sidebar_for(@pr.product) unless @pr.product.nil? %>
+
 <h1 class="page-header">Press Information <small>Press releases, images, and information.</small></h1>
 
 <div class="pr-content">
