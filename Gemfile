@@ -19,3 +19,5 @@ end
 
 # Markdown
 gem 'bluecloth'
+
+gem 'active_link_to'

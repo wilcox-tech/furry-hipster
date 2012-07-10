@@ -1,2 +1,12 @@
-<h1>PressReleases#show</h1>
-<p>Find me in app/views/press_releases/show.html.erb</p>
+<% provide :title, "#{@pr.headline}" %>
+<% provide :meta_desc, @pr.subhead %>
+
+<h1 class="page-header">Press Information <small>Press releases, images, and information.</small></h1>
+
+<div class="pr-content">
+  <h1 class="pr-headline"><%= @pr.headline %></h1>
+  <h3 class="pr-subhead"><%= @pr.subhead %></h2>
+  
+  <%= markdownify @pr.content %>
+</div>
+

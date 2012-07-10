@@ -6,5 +6,6 @@ class PressReleasesController < ApplicationController
   end
 
   def show
+    @pr = PressRelease.find(params[:id])
   end
 end
