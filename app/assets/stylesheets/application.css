@@ -133,6 +133,8 @@ a.brand {
 .pr-headline { font-variant: small-caps; }
 /* doesn't work with the word 'iPhone' .pr-subhead { text-transform: capitalize; } */
 
+img { padding: 0 1em; }
+
 /*
     ColorBox Core Style:
     The following CSS is consistent between example themes and should not be altered.
