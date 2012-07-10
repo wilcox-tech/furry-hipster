@@ -24,7 +24,7 @@
     <h2>Press Releases</h2>
     <dl class="dl-horizontal">
     <% @releases.each {|pr| %>
-      <dt><%= pr.created_at.strftime('%F') %></dt>
+      <dt><%= pr.updated_at.strftime('%F') %></dt>
       <dd><h4><a href="/pr/<%= pr.id %>"><%= pr.headline %></a></h4></dd>
     <% } %>
     </dl>
