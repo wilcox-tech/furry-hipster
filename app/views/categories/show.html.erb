@@ -6,6 +6,8 @@
 </h1>
 
 <% @category.products.each { |product| %>
+  <%= "<img src=\"#{product.image_url}\" alt=\"\" style=\"float:left;\">".html_safe unless product.image_url.nil? %>
   <h2><%= link_to product.title, category_product_path(@category.slug, product.slug) %></h2>
   <em><%= product.excerpt %></em>
+  <%= "<div style=\"clear:both;\"></div>".html_safe unless product.image_url.nil? %>
 <% } %>
