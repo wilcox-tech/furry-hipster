@@ -221,3 +221,5 @@ img { padding: 0 1em; }
 .cboxIE6 #cboxMiddleRight {
     _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
 }
+
+input[type=image] { width: auto; }
